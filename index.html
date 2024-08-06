@@ -602,11 +602,14 @@
         reveal();
 
         // JavaScript for parallax effect on hero section
-        window.addEventListener('scroll', () => {
-            const hero = document.querySelector('.hero');
-            const scrollPosition = window.pageYOffset;
-            hero.style.backgroundPositionY = scrollPosition * 0.7 + 'px';
+        // JavaScript for parallax effect
+    window.addEventListener('scroll', function() {
+        const parallax = document.querySelectorAll('.hero');
+        parallax.forEach((element) => {
+            let scrollPosition = window.pageYOffset;
+            element.style.backgroundPositionY = (scrollPosition * 0.5) + "px";
         });
+    });
     </script>
 </body>
 </html>
