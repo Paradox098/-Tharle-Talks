@@ -603,13 +603,26 @@
 
         // JavaScript for parallax effect on hero section
         // JavaScript for parallax effect
-    window.addEventListener('scroll', function() {
-        const parallax = document.querySelectorAll('.hero');
-        parallax.forEach((element) => {
-            let scrollPosition = window.pageYOffset;
-            element.style.backgroundPositionY = (scrollPosition * 0.5) + "px";
+    document.addEventListener('DOMContentLoaded', function() {
+    const parallaxElements = document.querySelectorAll('.hero');
+    let ticking = false;
+
+    function updateParallax() {
+        const scrollPosition = window.pageYOffset;
+        parallaxElements.forEach((element) => {
+            const speed = 0.5; // Adjust this value to change parallax speed
+            element.style.transform = `translate3d(0, ${scrollPosition * speed}px, 0)`;
         });
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', function() {
+        if (!ticking) {
+            window.requestAnimationFrame(updateParallax);
+            ticking = true;
+        }
     });
+});
     </script>
 </body>
 </html>
