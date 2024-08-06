@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tharle Talks - Insightful Conversations</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <style>
         :root {
-            --primary-color: #6200ea;
-            --secondary-color: #3700b3;
-            --accent-color: #03dac6;
-            --background-color: #f5f5f5;
-            --text-color: #333333;
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --background-color: #ecf0f1;
+            --text-color: #34495e;
             --card-bg-color: #ffffff;
         }
 
@@ -23,7 +23,7 @@
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Outfit', sans-serif;
             line-height: 1.6;
             color: var(--text-color);
             background-color: var(--background-color);
@@ -46,7 +46,7 @@
         }
 
         header.scrolled {
-            background-color: rgba(98, 0, 234, 0.95);
+            background-color: rgba(44, 62, 80, 0.95);
         }
 
         .header-content {
@@ -138,7 +138,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(45deg, rgba(98, 0, 234, 0.6), rgba(3, 218, 198, 0.6));
+            background: linear-gradient(45deg, rgba(44, 62, 80, 0.6), rgba(231, 76, 60, 0.6));
             z-index: 1;
         }
 
@@ -164,7 +164,7 @@
         .cta-button {
             display: inline-block;
             background-color: var(--accent-color);
-            color: var(--primary-color);
+            color: #ffffff;
             padding: 12px 30px;
             border-radius: 30px;
             text-decoration: none;
@@ -175,9 +175,9 @@
         }
 
         .cta-button:hover {
-            background-color: #02b3a4;
+            background-color: #c0392b;
             transform: translateY(-3px);
-            box-shadow: 0 4px 10px rgba(3, 218, 198, 0.3);
+            box-shadow: 0 4px 10px rgba(231, 76, 60, 0.3);
         }
 
         .section {
@@ -222,7 +222,7 @@
             top: 10px;
             left: 10px;
             background-color: var(--accent-color);
-            color: var(--primary-color);
+            color: #ffffff;
             padding: 5px 10px;
             border-radius: 20px;
             font-size: 0.9rem;
@@ -311,7 +311,7 @@
 
         .subscribe-form button {
             background-color: var(--accent-color);
-            color: var(--primary-color);
+            color: #ffffff;
             border: none;
             padding: 15px 30px;
             border-radius: 5px;
@@ -322,7 +322,7 @@
         }
 
         .subscribe-form button:hover {
-            background-color: #02b3a4;
+            background-color: #c0392b;
         }
 
         footer {
@@ -500,9 +500,9 @@
                             <audio controls>
                                 <source src="path/to/episode3.mp3" type="audio/mpeg">
                                 Your browser does not support the audio element.
-                            </audio>​​​​​​​​​​​​​​​​                            <p class="episode-description">Another exciting episode is in the works. Check back soon!</p>
-                            <a href="#" class="read-more">Read More</a>
-                        </div>
+                            </audio>
+                            <p class="episode-description">Another exciting episode is in the works. Check back soon!</p>
+                            <a href="#" class="read-more">Read More</a>​​​​​​​​​​​​​​​​                        </div>
                     </div>
                 </div>
             </div>
@@ -600,7 +600,13 @@
 
         // To check the scroll position on page load
         reveal();
+
+        // JavaScript for parallax effect on hero section
+        window.addEventListener('scroll', () => {
+            const hero = document.querySelector('.hero');
+            const scrollPosition = window.pageYOffset;
+            hero.style.backgroundPositionY = scrollPosition * 0.7 + 'px';
+        });
     </script>
 </body>
 </html>
-                            
