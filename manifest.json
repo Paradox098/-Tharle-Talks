@@ -1,26 +1,21 @@
-
-  "name": "tharle talks",
-  "short_name": "tharle talks",
-  "description": "tharle talks",
-  "icons": [
-    {
-      "src": "icon.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "icon.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any"
-    }
-  ],
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#ff9900",
-  "orientation": "portrait",
-  "scope": "/",
-  "lang": "en"
+{
+    "name": "Tharle Talks",
+    "short_name": "Tharle Talks",
+    "description": "A podcast dedicated to insightful conversations on various topics.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ecf0f1",
+    "theme_color": "#2c3e50",
+    "icons": [
+        {
+            "src": "/path/to/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/path/to/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
 }
