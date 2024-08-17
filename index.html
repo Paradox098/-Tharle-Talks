@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/philfung/add-to-homescreen@1.8/dist/add-to-homescreen.min.css">
+<script src="https://cdn.jsdelivr.net/gh/philfung/add-to-homescreen@1.8/dist/add-to-homescreen.min.js"></script>
     <title>Tharle Talks - Insightful Conversations</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
@@ -688,5 +690,24 @@
             }
         }
     </script>
+    <script>
+document.addEventListener('DOMContentLoaded', function () { // document.getElementById('addToHomeScreen').addEventListener('click', function () and add <button id="addToHomeScreen">Add to Home Screen</button> somewhere on your page to get a button instead.
+
+ window.AddToHomeScreenInstance = new window.AddToHomeScreen({
+  appName: 'Aardvark',                                   // Name of the app.
+                                                         // Required.
+  appIconUrl: 'apple-touch-icon.png',                    // App icon link (square, at least 40 x 40 pixels).  
+                                                         // Required.
+  assetUrl: 'https://cdn.jsdelivr.net/gh/philfung/add-to-homescreen@1.8/dist/assets/img/',  // Link to directory of library image assets.
+
+  maxModalDisplayCount: -1                               // If set, the modal will only show this many times.
+                                                         // Optional. Default: -1 (no limit).  (Debugging: Use this.clearModalDisplayCount() to reset the count)
+});
+      
+ ret = window.AddToHomeScreenInstance.show('en');        // show "add-to-homescreen" instructions to user, or do nothing if already added to homescreen
+                                                         // The only argument is the language to show the messages in (currently only 'de', 'en', 'pt' and 'fr' are available).
+});
+</script>
+</body>
 </body>
 </html>
